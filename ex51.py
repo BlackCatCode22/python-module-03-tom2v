@@ -9,7 +9,8 @@ print("\nI can calculate averages.  Enter (done) when you are finished entering 
 #Main program
 while True:
     sval = input("Enter a number: ")
-    if sval == "done":
+    exit = sval.lower()
+    if exit == "done":
         break
     try:
         fval = float(sval)
@@ -20,8 +21,8 @@ while True:
     tot = tot + fval
 
 # Prints results
-if sval == "done" and num == 0:
-   print("\nYou are done.")
+if exit == "done" and num == 0:
+   print("\nNo numbers entered. There is no average.")
 else:
    print("\nThe total is",tot, "\nThere are",num,"numbers. \nYour average is",tot/num)
 
